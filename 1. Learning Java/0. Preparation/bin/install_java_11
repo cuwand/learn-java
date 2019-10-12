@@ -1,0 +1,11 @@
+#! /bin/bash
+
+# [get_golang.sh](https://gist.github.com/n8henrie/1043443463a4a511acf98aaa4f8f0f69)
+# Download latest Golang release for AMD64
+# https://dl.google.com/go/go1.10.linux-amd64.tar.gz
+
+
+echo "Start Installing java 11"
+sudo add-apt-repository ppa:openjdk-r/ppa \
+&& sudo apt-get update -q \
+&& sudo apt install -y openjdk-11-jdk
