@@ -1,0 +1,4 @@
+
+interface SomethingElseable {
+	void hurray();
+}
