@@ -1,6 +1,24 @@
 
 public class Animal {
+	public int size;
+
+	public Animal() {
+		this.size = 10;
+	}
+
+	public Animal(int size) {
+		this.size = size;
+	}
+
 	class Brain {
+		int brainSize;
+
+		public Brain() {
+			System.out.printf("Animal.this.size >> %d\n", Animal.this.size);
+			// Scoping of the “this” reference
+			this.brainSize = Animal.this.size;
+		}
+
 		void disgustingMethod() {
 			// Well, which instance of Animal ? If we have several Animal objects around
 			// (say, a few Cat s and Dog s), we need to know whose performBehavior() method
