@@ -8,6 +8,7 @@ public class Animation implements Runnable {
 		// TODO Auto-generated constructor stub
 		this.name = name;
 		myThread = new Thread(this);
+		myThread.setDaemon(true);
 		myThread.start();
 	}
 
