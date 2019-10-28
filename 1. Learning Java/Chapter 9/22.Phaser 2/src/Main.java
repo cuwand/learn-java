@@ -32,17 +32,20 @@ public class Main {
 		currentPhase = phaser.getPhase();
 
 		// rebutan sama yang dalem My Thread
+		System.out.println("Wait And Advance From Main");
 		phaser.arriveAndAwaitAdvance();
 		System.out.println("Phase " + currentPhase + " Complete");
 		System.out.println("Phase Zero Ended");
 
 		// Wait for all threads to complete phase two.
 		currentPhase = phaser.getPhase();
+		System.out.println("Wait And Advance From Main");
 		phaser.arriveAndAwaitAdvance();
 		System.out.println("Phase " + currentPhase + " Complete");
 		System.out.println("Phase One Ended");
 
 		currentPhase = phaser.getPhase();
+		System.out.println("Wait And Advance From Main");
 		phaser.arriveAndAwaitAdvance();
 		System.out.println("Phase " + currentPhase + " Complete");
 		System.out.println("Phase Two Ended");
