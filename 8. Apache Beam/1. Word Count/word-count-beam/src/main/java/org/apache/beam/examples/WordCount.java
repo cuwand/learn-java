@@ -159,7 +159,7 @@ public class WordCount {
      * this option to choose a different input file or glob.
      */
     @Description("Path of the file to read from")
-    @Default.String("gs://apache-beam-samples/shakespeare/kinglear.txt")
+    @Default.String("example.txt")
     String getInputFile();
 
     void setInputFile(String value);
@@ -175,20 +175,32 @@ public class WordCount {
   static void runWordCount(WordCountOptions options) {
     Pipeline p = Pipeline.create(options);
 
+    System.out.println("------Run Word Count------");
+
+    System.out.println("Input File : " + options.getInputFile());
+    System.out.println("Output File : " + options.getOutput());
+    System.out.println("--------------------------");
     // Concepts #2 and #3: Our pipeline applies the composite CountWords transform, and passes the
     // static FormatAsTextFn() to the ParDo transform.
-    p.apply("ReadLines", TextIO.read().from(options.getInputFile()))
+    System.out.println(p.apply("ReadLines", TextIO.read().from(options.getInputFile()))
         .apply(new CountWords())
         .apply(MapElements.via(new FormatAsTextFn()))
-        .apply("WriteCounts", TextIO.write().to(options.getOutput()));
+    //    .apply("WriteCounts", TextIO.write().to(options.getOutput()))
+    );
+    System.out.println("--------------------------");
 
-    p.run().waitUntilFinish();
+    p.run();//.waitUntilFinish();
+
+    System.out.println("------End Word Count------");
   }
 
   public static void main(String[] args) {
+    System.out.println("Starting Word Count Beam");
+    System.out.println(String.join(" | ", args));
     WordCountOptions options =
         PipelineOptionsFactory.fromArgs(args).withValidation().as(WordCountOptions.class);
 
+    System.out.println(options);
     runWordCount(options);
   }
 }

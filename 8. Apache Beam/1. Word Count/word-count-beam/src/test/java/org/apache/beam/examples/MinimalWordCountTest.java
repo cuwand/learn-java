@@ -55,7 +55,7 @@ public class MinimalWordCountTest implements Serializable {
   public void testMinimalWordCount() throws Exception {
     p.getOptions().as(GcsOptions.class).setGcsUtil(buildMockGcsUtil());
 
-    p.apply(TextIO.read().from("gs://apache-beam-samples/shakespeare/*"))
+    p.apply(TextIO.read().from("example.txt"))
         .apply(
             FlatMapElements.into(TypeDescriptors.strings())
                 .via((String word) -> Arrays.asList(word.split("[^a-zA-Z']+"))))

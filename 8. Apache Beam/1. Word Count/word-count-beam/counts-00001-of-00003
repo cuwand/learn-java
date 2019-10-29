@@ -1,0 +1,167 @@
+    
+      <artifactId>mockito-core</artifactId>
+         which is used in the main code of DebuggingWordCount example. -->
+      <artifactId>hamcrest-core</artifactId>
+    
+      <artifactId>hamcrest-library</artifactId>
+
+      <artifactId>junit</artifactId>
+        <artifactId>maven-shade-plugin</artifactId>
+      </dependencies>
+      <id>nemo-runner</id>
+          <groupId>org.apache.nemo</groupId>
+        </dependency>
+          <artifactId>hadoop-common</artifactId>
+            <exclusion>
+</project>
+
+        that require this for job submission to a cluster.
+        <groupId>org.apache.maven.plugins</groupId>
+        </plugin>
+  </build>
+    <profile>
+        <activeByDefault>true</activeByDefault>
+      <dependencies>
+          <artifactId>beam-runners-direct-java</artifactId>
+          </exclusions>
+          Apex 3.6 is built against YARN 2.6. Version in the fat jar has to match
+        <dependency>
+          <version>${hadoop.version}</version>
+        <dependency>
+  <artifactId>word-count-beam</artifactId>
+  <packaging>jar</packaging>
+    <beam.version>2.16.0</beam.version>
+    <google-clients.version>1.27.0</google-clients.version>
+    <joda.version>2.10.3</joda.version>
+        <dependency>
+      <dependencies>
+          <artifactId>beam-runners-reference-java</artifactId>
+    </dependency>
+    <dependency>
+      <version>${beam.version}</version>
+          <groupId>org.apache.beam</groupId>
+      </dependencies>
+    <profile>
+        <dependency>
+        <dependency>
+          <version>${beam.version}</version>
+        <dependency>
+          <version>${spark.version}</version>
+            <exclusion>
+            </exclusion>
+        <dependency>
+          <version>${jackson.version}</version>
+        <!-- [BEAM-3519] GCP IO exposes netty on its API surface, causing conflicts with runners -->
+      </dependencies>
+   <profile>
+        <activeByDefault>true</activeByDefault>
+        </dependency>
+              <goal>shade</goal>
+              <finalName>${project.artifactId}-bundled-${project.version}</finalName>
+                  <artifact>*:*</artifact>
+                    <exclude>META-INF/*.SF</exclude>
+                  </excludes>
+              <transformers>
+            </configuration>
+      </plugin>
+    <pluginManagement>
+          <groupId>org.codehaus.mojo</groupId>
+          <configuration>
+             in by a transitive dependency of google-api-client -->
+    <maven-exec-plugin.version>1.6.0</maven-exec-plugin.version>
+    <mockito.version>3.0.0</mockito.version>
+    <spark.version>2.4.4</spark.version>
+    <nemo.version>0.1</nemo.version>
+      <groupId>com.google.apis</groupId>
+      <exclusions>
+        <exclusion>
+        </exclusion>
+
+      <artifactId>joda-time</artifactId>
+
+      <groupId>org.slf4j</groupId>
+    </dependency>
+      <groupId>org.slf4j</groupId>
+      <!-- When loaded at runtime this will wire up slf4j to the JUL backend -->
+              <groupId>org.slf4j</groupId>
+            <exclusion>
+            </exclusion>
+        </dependency>
+
+      <!-- Makes the DataflowRunner available when running a pipeline. -->
+      </dependencies>
+    <profile>
+      <dependencies>
+          <artifactId>beam-runners-apex</artifactId>
+        </dependency>
+          google-http-client. Apex dependency version being specified explicitly so that it gets picked up. This
+        <dependency>
+          <version>4.3.6</version>
+            <exclusion>
+            </exclusion>
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    The ASF licenses this file to You under the Apache License, Version 2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    See the License for the specific language governing permissions and
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  <modelVersion>4.0.0</modelVersion>
+          <artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
+            <exclusion>
+            </exclusion>
+              <artifactId>netty-handler</artifactId>
+        </dependency>
+    <profile>
+        <dependency>
+          <version>${beam.version}</version>
+      </dependencies>
+      <id>samza-runner</id>
+          <groupId>org.apache.beam</groupId>
+        <executions>
+          <dependency>
+            <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+        shade plugin by listing the plugin higher within the file. -->
+        <artifactId>maven-jar-plugin</artifactId>
+      </exclusions>
+    <dependency>
+      <version>${google-clients.version}</version>
+      </exclusions>
+    <dependency>
+      <version>${bigquery.version}</version>
+             in by a transitive dependency of google-api-client -->
+          <artifactId>guava-jdk5</artifactId>
+          <scope>runtime</scope>
+    </profile>
+
+    <dependency>
+      <version>${beam.version}</version>
+    <!-- Adds a dependency on the Beam Google Cloud Platform IO module. -->
+      <artifactId>beam-sdks-java-io-google-cloud-platform</artifactId>
+
+      <groupId>com.google.api-client</groupId>
+      <exclusions>
+        <exclusion>
+    </profile>
+      <id>flink-runner</id>
+        <dependency>
+               of supported Flink versions and their artifact names:
+          <version>${beam.version}</version>
+      </dependencies>
+    <profile>
+           overrides some Spark dependencies to Beam-compatible versions. -->
+      </properties>
+          <groupId>org.apache.beam</groupId>
+      </exclusions>
+  </properties>
+    <repository>
+      <url>https://repository.apache.org/content/repositories/snapshots/</url>
+      </releases>
+      </snapshots>
+
+      <plugin>
+        <version>${maven-compiler-plugin.version}</version>
+          <target>1.8</target>
+
+        <artifactId>maven-surefire-plugin</artifactId>
+          <parallel>all</parallel>

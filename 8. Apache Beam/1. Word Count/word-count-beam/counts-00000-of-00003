@@ -1,0 +1,169 @@
+        </dependency>
+    </dependency>
+      <groupId>org.mockito</groupId>
+    <!-- Hamcrest and JUnit are required dependencies of PAssert,
+      <groupId>org.hamcrest</groupId>
+    </dependency>
+      <groupId>org.hamcrest</groupId>
+    </dependency>
+      <groupId>junit</groupId>
+        </dependency>
+    <profile>
+        <dependency>
+          <version>${nemo.version}</version>
+          <groupId>org.apache.hadoop</groupId>
+          <exclusions>
+      </plugin>
+        Configures `mvn package` to produce a bundled jar ("fat jar") for runners
+      <plugin>
+          </configuration>
+    </pluginManagement>
+  <profiles>
+      <activation>
+      <!-- Makes the DirectRunner available when running a pipeline. -->
+          <groupId>org.apache.beam</groupId>
+        <!--
+        -->
+          <artifactId>hadoop-yarn-client</artifactId>
+        </dependency>
+          <artifactId>hadoop-common</artifactId>
+  <groupId>org.example</groupId>
+
+  <properties>
+    <bigquery.version>v2-rev20181104-1.27.0</bigquery.version>
+    <jackson.version>2.9.10</jackson.version>
+    <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+      <dependencies>
+          <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
+          <groupId>org.apache.beam</groupId>
+      <version>${junit.version}</version>
+    <!-- The DirectRunner is needed for unit tests. -->
+      <artifactId>beam-runners-direct-java</artifactId>
+          <version>${beam.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+
+      <dependencies>
+        </dependency>
+          <artifactId>beam-sdks-java-io-hadoop-file-system</artifactId>
+        </dependency>
+          <artifactId>spark-streaming_2.11</artifactId>
+          <exclusions>
+              <artifactId>jul-to-slf4j</artifactId>
+        </dependency>
+          <artifactId>jackson-module-scala_2.11</artifactId>
+        </dependency>
+        </dependency>
+
+      <activation>
+      <!-- Makes the PortableRunner available when running a pipeline. -->
+            <configuration>
+                <filter>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+              </filters>
+              </transformers>
+        </executions>
+
+        <plugin>
+          <version>${maven-exec-plugin.version}</version>
+          <groupId>com.google.guava</groupId>
+    <maven-shade-plugin.version>3.1.0</maven-shade-plugin.version>
+    <slf4j.version>1.7.25</slf4j.version>
+    <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
+    <dependency>
+      <version>${pubsub.version}</version>
+             in by a transitive dependency of google-api-client -->
+          <artifactId>guava-jdk5</artifactId>
+    </dependency>
+      <groupId>joda-time</groupId>
+    </dependency>
+    <dependency>
+      <version>${slf4j.version}</version>
+    <dependency>
+      <version>${slf4j.version}</version>
+    </dependency>
+            </exclusion>
+              <artifactId>slf4j-log4j12</artifactId>
+      <scope>test</scope>
+          <scope>runtime</scope>
+    </profile>
+      <id>dataflow-runner</id>
+
+      <!-- Makes the ApexRunner available when running a pipeline. -->
+          <groupId>org.apache.beam</groupId>
+          <scope>runtime</scope>
+          Apex depends on httpclient version 4.3.6, project has a transitive dependency to httpclient 4.0.1 from
+        -->
+          <artifactId>httpclient</artifactId>
+          <exclusions>
+              <artifactId>commons-codec</artifactId>
+<!--
+    this work for additional information regarding copyright ownership.
+    the License.  You may obtain a copy of the License at
+
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-->
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  </dependencies>
+          <groupId>org.apache.beam</groupId>
+          <exclusions>
+              <artifactId>grpc-netty</artifactId>
+              <groupId>io.netty</groupId>
+          </exclusions>
+    </profile>
+      <dependencies>
+          <artifactId>beam-runners-gearpump</artifactId>
+        </dependency>
+    <profile>
+        <dependency>
+          <version>${beam.version}</version>
+            <goals>
+            <phase>package</phase>
+        <dependencies>
+            <artifactId>surefire-junit47</artifactId>
+        </dependencies>
+      <!-- Ensure that the Maven jar plugin runs before the Maven
+        <groupId>org.apache.maven.plugins</groupId>
+
+      <artifactId>google-http-client</artifactId>
+        <!-- Exclude an old version of guava that is being pulled
+        </exclusion>
+
+      <artifactId>google-api-services-bigquery</artifactId>
+        <!-- Exclude an old version of guava that is being pulled
+          <groupId>com.google.guava</groupId>
+      </dependencies>
+  </profiles>
+    <!-- Adds a dependency on the Beam SDK. -->
+      <artifactId>beam-sdks-java-core</artifactId>
+
+      <groupId>org.apache.beam</groupId>
+    </dependency>
+    <dependency>
+      <version>${google-clients.version}</version>
+             in by a transitive dependency of google-api-client -->
+      </dependencies>
+    <profile>
+      <dependencies>
+          <!-- Please see the Flink Runner page for an up-to-date list
+          <artifactId>${flink.artifact.name}</artifactId>
+        </dependency>
+
+      <!-- Makes the SparkRunner available when running a pipeline. Additionally,
+        <netty.version>4.1.17.Final</netty.version>
+        <dependency>
+          <version>${beam.version}</version>
+        </exclusion>
+  <repositories>
+      <name>Apache Development Snapshot Repository</name>
+        <enabled>false</enabled>
+        <enabled>true</enabled>
+  </repositories>
+    <plugins>
+        <artifactId>maven-compiler-plugin</artifactId>
+          <source>1.8</source>
+      </plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <configuration>
+          <redirectTestOutputToFile>true</redirectTestOutputToFile>
