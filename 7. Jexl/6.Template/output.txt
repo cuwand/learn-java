@@ -1,0 +1,5 @@
+ The value 1 is under fourty-two
+ The value 3 is under fourty-two
+ The value 5 is under fourty-two
+ Life, the universe, and everything
+ The value $(x} is over fourty-two

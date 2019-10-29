@@ -22,12 +22,10 @@ public class Main {
 		}
 
 		System.out.println(jc.get("UNUSED_VAR"));
-		
 
-		JexlInfo ji = new JexlInfo("asd", 1, 2);
-		System.out.println(ji.toString());
-		System.out.println(ji.getDetail());
-	
+		Foo foo = new Foo();
+
+		engine.invokeMethod(foo, "bar", null);
 	}
 
 }
