@@ -29,12 +29,13 @@ public class Main {
 
 		for (List<String> var : exp.getVariables()) {
 			String expectedVariable = var.get(0);
+			System.out.println("expectedVariable >> " + expectedVariable);
 			if (!jc.has(expectedVariable)) {
 				jc.set(expectedVariable, "${" + expectedVariable + "}");
 			}
 		}
 		String template = (String) jexlExpression.createExpression(storedExpression).evaluate(jc);
-
+		System.out.println(template);
 		JxltEngine.Template t1 = jexl.createJxltEngine().createTemplate(template);
 
 		Writer writer1 = null;
