@@ -16,7 +16,8 @@ public class Main {
 				" The value ${x} is over fourty-two\n" + 
 				" $$   } else {\n" + 
 				" The value ${x} is under fourty-two\n"
-				+ " $$   }\n" + " $$ }";
+				+ " $$   }\n"
+				+ " $$ }";
 		JxltEngine.Template t = jexl.createJxltEngine().createTemplate(jexlExp);
 
 		Writer writer = null;

@@ -9,13 +9,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		JexlEngine engine = new JexlBuilder().create();
-		String expression = "Hello, Adrian ${SOME_VAR}!";
+		String expression = "$$ if Hello, Adrian ${SOME_VAR}!";
 		JxltEngine jexlExpression = engine.createJxltEngine();
 
 		// TODO Auto-generated method stub
 		JexlContext jc = new MapContext();
 		jc.set("SOME_VAR", "Jexl Video Demo");
-		jc.set("UNUSED_VAR", "UNUSED_VAR");
+		jc.set("UNUSED_VAR", "value of UNUSED_VAR");
 
 		if (jc.has("SOME_VAR")) {
 			System.out.println(jexlExpression.createExpression(expression).evaluate(jc));
