@@ -1,0 +1,26 @@
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+project.ext {
+    configPath = "$rootProject.projectDir/config/"
+    dropwizardVersion = '0.8.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "javax.xml.bind:jaxb-api:2.2.11"
+    implementation "com.sun.xml.bind:jaxb-core:2.2.11"
+    implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
+    implementation "javax.activation:activation:1.1.1"
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: dropwizardVersion
+}
+
+mainClassName = "gradleDropwizard.CleanCodeApplication"
+
+run {
+    args 'server', configPath + 'app_config.yml'
+}
