@@ -9,6 +9,7 @@ import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
+import com.dwbook.phonebook.resources.*;
 
 public class App extends Application<PhonebookConfiguration> {
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
@@ -26,6 +27,9 @@ public class App extends Application<PhonebookConfiguration> {
 
     @Override
     public void run(PhonebookConfiguration c, Environment e) throws Exception {
+        // Add the resource to the environment
+        e.jersey().register(new ContactResource());
+
         LOGGER.info("==============Method App#run() called===================");
         for (int i=0; i < c.getMessageRepetitions(); i++) {
             LOGGER.info(c.getMessage());
